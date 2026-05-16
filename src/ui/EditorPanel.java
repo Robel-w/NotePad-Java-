@@ -5,21 +5,22 @@ import java.awt.*;
 
 public class EditorPanel extends JPanel {
 
-    private JTextArea textArea;
+    private JTextPane textPane;
 
     public EditorPanel() {
 
         setLayout(new BorderLayout());
 
-        textArea = new JTextArea();
-        textArea.setFont(new Font("Arial", Font.PLAIN, 16));
+        textPane = new JTextPane();
 
-        JScrollPane scrollPane = new JScrollPane(textArea);
+        textPane.setFont(new Font("Arial", Font.PLAIN, 18));
+
+        JScrollPane scrollPane = new JScrollPane(textPane);
 
         add(scrollPane, BorderLayout.CENTER);
     }
 
-    public JTextArea getTextArea() {
-        return textArea;
+    public JTextPane getTextPane() {
+        return textPane;
     }
 }
